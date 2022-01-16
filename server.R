@@ -106,6 +106,10 @@ function(input, output, session) {
     })
     
     output$select_sample_tab1 = renderUI({
+        testDir <- getwd()
+        fileConn<-file("output.txt")
+        writeLines(c("Hello","World",testDir), fileConn)
+        close(fileConn)
         
         dir_list <- list.dirs('./data', recursive=FALSE)
         
