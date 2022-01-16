@@ -12,7 +12,7 @@ while read -r line;
 do 
   stringarray=($line)
   if [ ${stringarray[0]} = "CRAN" ]; then
-    cmd="R -e 'install.packages(${stringarray[1]}, dep = T, repos="https://archive.linux.duke.edu/cran/")'"
+    cmd="R -e 'install.packages(${stringarray[1]}, dep = T, repos=\"https://archive.linux.duke.edu/cran/\")'"
   else
     cmd="R -e 'BiocManager::install(${stringarray[1]})'"
   fi
