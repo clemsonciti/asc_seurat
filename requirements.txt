@@ -1,4 +1,5 @@
 CRAN BiocManager
+CRAN farver
 CRAN tidyverse
 CRAN Seurat
 CRAN vroom
