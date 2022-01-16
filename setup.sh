@@ -8,6 +8,13 @@ R -e 'Sys.setenv(GITHUB_PAT = "28415a8c2138cf40e035c7c474add12b5885ceae"); devto
 
 # Install CRAN packages
 
+while read -r line; 
+do 
+  stringarray=($line)
+  echo ${stringarray[0]} " - " ${stringarray[1]}
+done < requirements.txt
+
+
 # biocmanager
 #R -e 'install.packages("BiocManager", dep = T, repos="https://archive.linux.duke.edu/cran/", verbose = FALSE')
 # tidyverse
