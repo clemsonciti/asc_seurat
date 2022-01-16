@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-# This is a combination of Dockerfile, setup file from the dyn docker, and init_app.sh
+# This is a combination of Dockerfile, setup steps from the kirstlab/asc_seurat:dynverse, and init_app.sh
 
 R -e 'install.packages("openssl", dep = T, repos="https://archive.linux.duke.edu/cran/", verbose = FALSE)'
 R -e 'install.packages("devtools", dep = T, repos="https://archive.linux.duke.edu/cran/", verbose = FALSE)'
