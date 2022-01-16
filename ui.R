@@ -10,19 +10,33 @@ suppressMessages( require("rclipboard") )
 suppressMessages( require("shinycssloaders") )
 suppressMessages( require("shinyFeedback") )
 
-if (dir.exists('/app/user_work')) {
-    source("/app/R/ui_functions.R")
-    source("/app/R/improved_dot_and_violin_plots.R")
+#if (dir.exists('/app/user_work')) {
+#    source("/app/R/ui_functions.R")
+#    source("/app/R/improved_dot_and_violin_plots.R")
+#} else {
+#    source("R/ui_functions.R")
+#    source("R/improved_dot_and_violin_plots.R")
+#    
+#}
+
+if (dir.exists('./user_work')) {
+    source("./R/ui_functions.R")
+    source("./R/improved_dot_and_violin_plots.R")
 } else {
     source("R/ui_functions.R")
-    source("R/improved_dot_and_violin_plots.R")
-    
+    source("R/improved_dot_and_violin_plots.R")    
 }
+
+
 function(request) {
     
     ## This set the app to properly work with docker
-    if (dir.exists('/app/user_work')) {
-        setwd('/app/user_work')
+    #if (dir.exists('/app/user_work')) {
+    #    setwd('/app/user_work')
+    #}
+    
+    if (dir.exists('./user_work')) {
+        setwd('./user_work')
     }
     
     fluidPage(
