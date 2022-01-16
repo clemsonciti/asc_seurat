@@ -13,9 +13,9 @@ do
   stringarray=($line)
   echo ${stringarray[1]} + "************************************************************"
   if [ ${stringarray[0]} = "CRAN" ]; then
-    R -e 'install.packages("${stringarray[1]}", dep = T, repos="https://archive.linux.duke.edu/cran/")'
+    R -e "install.packages('${stringarray[1]}', dep = T, repos='https://archive.linux.duke.edu/cran/')"
   else
-    R -e 'BiocManager::install("${stringarray[1]}")'
+    R -e "BiocManager::install('${stringarray[1]}')"
   fi
 done < requirements.txt
 
