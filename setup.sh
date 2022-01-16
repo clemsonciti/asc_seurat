@@ -10,8 +10,7 @@ R -e 'Sys.setenv(GITHUB_PAT = "28415a8c2138cf40e035c7c474add12b5885ceae"); devto
 
 # Install CRAN packages
 
-module load hdf5/1.12.0-gcc
-module load cairo/1.16.0-gcc/8.4.1 gsl/2.5-gcc/8.3.1
+module load hdf5/1.12.0-gcc cairo/1.16.0-gcc/8.4.1 gsl/2.5-gcc/8.3.1 cuda/11.1.0-gcc/8.4.1
 
 while read -r line; 
 do 
