@@ -1,10 +1,7 @@
 CRAN BiocManager
 CRAN tidyverse
 CRAN Seurat
-CRAN SeuratObject
-CRAN patchwork
 CRAN vroom
-CRAN ggplot2
 CRAN svglite
 CRAN circlize
 CRAN reactable
@@ -20,7 +17,6 @@ BIOCMANAGER multtest
 CRAN metap
 CRAN DT
 CRAN dplyr
-CRAN hdf5r
 CRAN cluster
 BIOCMANAGER ComplexHeatmap
 BIOCMANAGER tradeSeq
