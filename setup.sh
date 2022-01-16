@@ -56,6 +56,8 @@ R -e 'install.packages("hdf5r", dep = T, repos="https://archive.linux.duke.edu/c
 R -e 'install.packages("cluster", dep = T, repos="https://archive.linux.duke.edu/cran/")'
 R -e 'BiocManager::install("ComplexHeatmap")'
 # tradeseq
+R -e 'install.packages("RcppEigen", dep = T, repos="https://archive.linux.duke.edu/cran/")'
+
 R -e 'BiocManager::install("tradeSeq")'
 # single cell experiment
 R -e 'BiocManager::install("SingleCellExperiment")'
