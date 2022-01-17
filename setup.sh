@@ -1,5 +1,11 @@
 #!/bin/bash 
 
+version=$(R --version | head -n 1 | cut -c11-13)
+
+R_LIBS_SITE="${HOME}/R/x86_64-pc-linux-gnu-library/${version}"
+mkdir -p $R_LIBS_SITE
+export $R_LIBS_SITE
+
 # This is a combination of Dockerfile, setup steps from the kirstlab/asc_seurat:dynverse, and init_app.sh
 
 R -e 'install.packages("openssl", dep = T, repos="https://archive.linux.duke.edu/cran/", verbose = FALSE)'
